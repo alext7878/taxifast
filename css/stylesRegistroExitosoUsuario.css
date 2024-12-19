@@ -1,0 +1,15 @@
+/* Estilos personalizados */
+body {
+    
+    background: linear-gradient(120deg, #eaf6f7, #8ba9e9);
+}
+
+h1 {
+     color: #bdd0f7;
+    
+}
+
+#imagenRegistro {
+    border: 2px solid #fcfdfd;
+    border-radius: 10px;
+}

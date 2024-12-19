@@ -1,0 +1,188 @@
+/* Estilos generales del cuerpo */
+body {
+    background: linear-gradient(120deg, #FF5733, #FFC300, #DAF7A6);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #3A3B3C;
+    background-image: url('.//img/LOGO-TAXIFAST.jpg'); /* Puedes cambiar esta imagen por cualquier fondo que prefieras */
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    padding-top: 100px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+header p {
+    font-size: 1.5rem;
+}
+
+/* Navbar */
+.navbar {
+    padding: 1rem;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+}
+
+/* Sección Acerca de Nosotros */
+#acerca {
+    background: linear-gradient(120deg, #cbcfcf, #6390f1);
+    color: #f9fcfb;
+    padding: 60px 0;
+}
+
+#acerca h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#acerca p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+#acerca .btn-primary {
+    background-color: #036ffd;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+#acerca .btn-primary:hover {
+    background-color: #9c0d08;
+}
+
+#acerca .btn-secondary {
+    background-color: #006eff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+#acerca .btn-secondary:hover {
+    background-color: #8b1108;
+}
+
+/* Sección Nuestra Flotilla */
+#flotilla {
+    background: linear-gradient(120deg, #DAF7A6, #FFC300);
+    color: #333;
+    padding: 60px 0;
+}
+
+#flotilla h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#flotilla p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.flotilla-img {
+    border-radius: 15px;
+    transition: transform 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flotilla-img:hover {
+    transform: scale(1.1);
+}
+
+/* Sección Trabaja con Nosotros */
+#trabaja {
+    background: linear-gradient(120deg, #FFC300, #FF5733);
+    color: white;
+    padding: 60px 0;
+}
+
+#trabaja h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#trabaja p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Sección Seguridad y Legales */
+#seguridad {
+    background-color: #333;
+    color: white;
+    padding: 60px 0;
+}
+
+#seguridad h5 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+#seguridad p {
+    font-size: 1.1rem;
+}
+
+/* Pie de página */
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Efectos de hover en botones */
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    header {
+        height: 300px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        padding-top: 60px;
+    }
+
+    #acerca h2, #flotilla h2, #trabaja h2 {
+        font-size: 2rem;
+    }
+
+    #acerca p, #flotilla p, #trabaja p {
+        font-size: 1rem;
+    }
+
+    .flotilla-img {
+        margin-bottom: 20px;
+    }
+}

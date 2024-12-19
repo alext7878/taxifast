@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario Conductor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/stylesusuarioConductor.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Título principal -->
+        <h1 class="text-center">Busca ya un usuario para contratar tu servicio</h1>
+        
+
+        <!-- Botón para mostrar los usuarios más cercanos -->
+        <div class="text-center mt-4">
+            <button class="btn btn-primary" id="mostrarUsuariosBtn">Ubicación Usuario más cercano</button>
+        </div>
+
+        <!-- Campo para mostrar los usuarios más cercanos con checkboxes -->
+        <div id="usuariosCercanos" class="mt-4" style="display: none;">
+            <h4>Usuarios más cercanos:</h4>
+            <form id="usuariosForm">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="usuario" id="usuario1" value="Usuario 1">
+                    <label class="form-check-label" for="usuario1">Usuario 1</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="usuario" id="usuario2" value="Usuario 2">
+                    <label class="form-check-label" for="usuario2">Usuario 2</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="usuario" id="usuario3" value="Usuario 3">
+                    <label class="form-check-label" for="usuario3">Usuario 3</label>
+                </div>
+            </form>
+        </div>
+
+        <!-- Botón para mostrar los detalles del viaje del usuario seleccionado -->
+        <div class="text-center mt-4">
+            <button class="btn btn-info" id="detallesViajeBtn" style="display: none;">Detalles del Viaje</button>
+        </div>
+
+        <!-- Descripción del viaje seleccionado -->
+        <div id="detallesViaje" class="mt-4" style="display: none;">
+            <h4>Descripción del Viaje:</h4>
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Origen de Carrera:</strong> <span id="origenCarrera"></span></li>
+                <li class="list-group-item"><strong>Destino de Carrera:</strong> <span id="destinoCarrera"></span></li>
+                <li class="list-group-item"><strong>Valor de la Carrera:</strong> <span id="valorCarrera"></span></li>
+            </ul>
+        </div>
+
+        <!-- Botón para contratar el viaje -->
+        <div class="text-center mt-4">
+            <button class="btn btn-success" id="contratarViajeBtn" style="display: none;">Contratar Viaje</button>
+        </div>
+    </div>
+
+    <script>
+        // Datos simulados de usuarios y viajes
+        const usuarios = {
+            "Usuario 1": { origen: "Calle 10 #15-30", destino: "Avenida 5 #8-40", valor: "$30.00" },
+            "Usuario 2": { origen: "Carrera 20 #30-45", destino: "Calle 7 #12-25", valor: "$25.00" },
+            "Usuario 3": { origen: "Avenida 15 #50-60", destino: "Carrera 8 #15-22", valor: "$35.00" }
+        };
+
+        // Mostrar usuarios cercanos cuando se hace clic en el botón
+        document.getElementById('mostrarUsuariosBtn').addEventListener('click', function () {
+            document.getElementById('usuariosCercanos').style.display = 'block';
+            document.getElementById('detallesViajeBtn').style.display = 'block';
+        });
+
+        // Mostrar los detalles del viaje del usuario seleccionado
+        document.getElementById('detallesViajeBtn').addEventListener('click', function () {
+            const usuarioSeleccionado = document.querySelector('input[name="usuario"]:checked');
+            if (!usuarioSeleccionado) {
+                alert("Por favor, seleccione un usuario.");
+            } else {
+                const usuario = usuarioSeleccionado.value;
+                document.getElementById('origenCarrera').textContent = usuarios[usuario].origen;
+                document.getElementById('destinoCarrera').textContent = usuarios[usuario].destino;
+                document.getElementById('valorCarrera').textContent = usuarios[usuario].valor;
+
+                // Mostrar los detalles del viaje y el botón de contratar
+                document.getElementById('detallesViaje').style.display = 'block';
+                document.getElementById('contratarViajeBtn').style.display = 'block';
+            }
+        });
+
+        // Redirigir a la página ContratoExitosoConductor.html al contratar el viaje
+        document.getElementById('contratarViajeBtn').addEventListener('click', function () {
+            window.location.href = 'ContratoExitosoConductor.html';
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+/* Estilos personalizados */
+body {
+    background: linear-gradient(120deg, #eaeff0, #8ba9e9);
+}
+
+h1 {
+    color: #007bff;
+}
+
+#usuariosCercanos, #detallesViaje {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+ul.list-group {
+    max-width: 600px;
+    margin: 0 auto;
+}

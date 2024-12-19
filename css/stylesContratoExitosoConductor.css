@@ -1,0 +1,13 @@
+/* Estilos personalizados */
+body {
+    background: linear-gradient(120deg, #eaeff0, #8ba9e9);
+}
+
+h1 {
+    color: #28a745;
+}
+
+#imagenContrato {
+    border: 2px solid #fafbfc;
+    border-radius: 10px;
+}
